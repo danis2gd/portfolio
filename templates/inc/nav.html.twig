@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="{{ path('page_index') }}">
+        <span id="brandName">Daniel Chadwick</span>
+        <span id="brandLogo">
+            <img src="{{ asset('img/brand_logo.png') }}" width="30" height="30" alt="">
+        </span>
+    </a>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link {{ app.request.get('_route') == 'page_index' ? 'active' }}" href="{{ path('page_index') }}">Home</a>
+        <a class="nav-item nav-link {{ app.request.get('_route') == 'page_cv' ? 'active' }}" href="{{ path('page_cv') }}">CV</a>
+        <button type="button" class="btn btn-link contact-link" data-toggle="modal" data-target="#contactModal">Contact</button>
+    </div>
+</nav>
+
+{% include('inc/_contact.html.twig') %}
+
+<!--
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="#">Daniel Chadwick</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="{{ path('page_index') }}#">Home</a>
+            <a class="nav-item nav-link" href="{{ path('page_cv') }}">CV</a>
+            <a class="nav-item nav-link" href="#">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<div id="navbar">
+    <a id="home" href="/">Home</a>
+    <a id="cv" href="/cv">CV</a>
+    <a href="javascript:void(0)">Contact</a>
+</div>
+-->

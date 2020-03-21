@@ -1,0 +1,104 @@
+/* container help */
+.container img {
+    max-width: 100%;
+}
+
+
+/* responsive grid */
+.grid-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.grid-item {
+    /*height: 550px;*/
+    flex-basis: 33%;
+    -ms-flex: auto;
+    width: 259px;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.grid-item-content {
+    padding: 20px 20px 20px 20px;
+}
+
+.grid-item-wrapper {
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+    background: #ececec;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
+    transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
+    position: relative;
+}
+
+.grid-image-top {
+    position: relative;
+}
+
+.grid-image-top img {
+    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+    filter: blur(2px);
+}
+
+.item-title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.grid-image-top > .item-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 26px;
+    margin: 10px;
+}
+
+/** responsive design */
+
+@media (max-width: 1333px) {
+    .grid-item {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 780px) {
+    .grid-container {
+        margin: 0 5% -20px 5%;
+    }
+
+    .grid-item {
+        flex-basis: 100%;
+    }
+
+    .container {
+        max-width: 100% !important;
+        margin: auto;
+    }
+
+    .links {
+        margin: 10px 30% 0 30%;
+        font-size: 25px;
+    }
+
+    .quickInfo {
+        text-align: center;
+        line-height: 150px;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-item-content p {
+        font-size: 16px;
+    }
+}

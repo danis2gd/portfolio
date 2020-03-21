@@ -1,0 +1,226 @@
+{% extends 'index.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+    <!-- main container -->
+    <div class="container p-2">
+        <div class="grid-row info-row">
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-item-content">
+                            <h3 class="item-title">PHP7</h3>
+                            <p>
+                                I was formally introduced to PHP in 2015, but had previous experience using the
+                                language, and have been using it for both professional and personal projects. I started
+                                off with processing scripts for orders, email scheduling, product management and moved
+                                on to Content Management Systems and then onto frameworks such as Symfony.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-item-content">
+                            <h3 class="item-title">SQL</h3>
+                            <p>
+                                I have been using SQL since working at my IT apprenticeship. I was first introduced to
+                                MySQL/MariaDB and PostgreSQL for help storing my data structures for reports, product
+                                management (stock) and email subscriber lists. I have used other SQL variants such as
+                                MSSQL and Oracle whilst studying. I am proficient in creating my own schemas for complex
+                                data systems such as my work recently on an expandable Survey system using Doctrine and
+                                relating it to a MySQL 8.0 database.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-item-content">
+                            <h3 class="item-title">HTML5 / CSS</h3>
+                            <p>
+                                HTML/CSS markup have been one of my first skills I learnt around 10 years ago. I am very
+                                comfortable designing frontend websites for anything from CMS, dashboards, product
+                                pages, and email templates. Recently, I have adapted my skills using CSS into adopting
+                                Less for my CSS processing as it allows for much cleaner stylesheets that are much
+                                easier to follow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-item-content">
+                            <h3 class="item-title">JavaScript</h3>
+                            <p>
+                                Originally starting to use JavaScript for simple website modifications for modals and
+                                click event handling but over the years I have used JS in modern applications. Whilst
+                                routing API calls I have used JavaScript to communicate with Symfony APIs to populate
+                                dashboard data. Furthermore, I developed a 2D canvas which handled object collisions in
+                                JS - whilst at University.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-item-content">
+                            <h3 class="item-title">Testing</h3>
+                            <p>
+                                I first started testing at University whilst learning C#. Unit Testing was core to the
+                                curriculum and thus good practices have carried over to other such testing in PHP
+                                (PHPUnit). I am confident in being able to write testable code which can ensure the
+                                robustness of any application. I have experience writing Behat tests to functionally
+                                test at my applications. One of the main ways I have applied Behat is through using
+                                Mink, Selenium and Chrome headless browsing for automated tests to emulate user
+                                behaviour.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-item-content">
+                            <h3 class="item-title">RabbitMQ</h3>
+                            <p>
+                                I learnt the fundamentals of RabbitMQ whilst working for Wren Kitchens and use messages
+                                for queuing background processes. I have applied this learning whilst developing a CSV
+                                parser for Wren Kitchens for stock items. Each CSV would be published and consumed by
+                                the parser for bulk processing to a MySQL database.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-item-content">
+                            <h3 class="item-title">Elastic</h3>
+                            <p>
+                                I used ElasticSearch in the aforementioned CSV parser to efficiently search through the
+                                parsed stock table which was populated through Symfony application using FOSElastica.
+                                Anytime a CSV was parsed the Elastic structure was re-populated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- about me -->
+    <div class="container-fluid bg-dark text-light">
+        <div class="p-5 m-2">
+            <h2 style="text-align: center">About Me</h2>
+            <p>Graduate Computer Science Student at the University of Hull. Currently working at Wren Kitchens as a
+                Junior PHP Developer. Prior to studying, I worked for 2 years at an online eCommerce Workwear Retailer
+                as
+                a Full Stack Apprentice working on PHP store management systems, scripts and website development (both
+                internal and external). Whilst at
+                University I studied mainly C# but have worked with Java, JavaScript, PHP, C++, and C. On the data side,
+                SQL was studied thoroughly. </p>
+            <p>Currently working at Wren Kitchens as part of the IT Development team. Wren's core systems are
+                developed on the Symfony framework. I work maintaining these systems across the full stack from backend,
+                Symfony Framework, to the frontend using modern JavaScript frameworks, Twig, and Less/CSS. Although
+                my experiences are mainly on the backend I have a wealth of experience creating interactive and
+                intuitive user experiences.</p>
+            <p>Some of the work is featured below.</p>
+        </div>
+    </div>
+
+    <!-- placeholder -->
+    <div class="container p-4 mt-1">
+        <h3>My Work</h3>
+        <div class="grid-row">
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://thecodeteam.com/projects/rex-ray/"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top">
+                            <img src="{{ asset('img/my_work/csv_upload_modified.png') }}"/>
+                            <span class="item-title transform">CSV Parser</span>
+                        </div>
+                        <div class="grid-item-content">
+                            <p>As part of my Graduate training scheme at Wren Kitchens I developed a product
+                                descriptions CSV parser which utilised: Symfony (PHP7) for the stack, RabbitMQ for
+                                handing off of the parsing process, Elastic for searching through product descriptions,
+                                and SQL for the data persistence.
+                            </p>
+                            <p>
+                                Also utilised was JavaScript for file upload handling and AJAX hand-off. For styling,
+                                CSS/LESS was used to manage stylesheets all through Webpack Encore.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://thecodeteam.com/projects/rex-ray/"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top">
+                            <img src="{{ asset('img/my_work/siapos.PNG') }}"/>
+                            <span class="item-title transform">Brewery Management System</span>
+                        </div>
+                        <div class="grid-item-content">
+                            <span class="item-sub-title" style="display:none;">Stock Inventory and Point of Sale Application</span>
+                            <p>As part of my dissertation, whilst studying at the University of Hull, I completed a
+                                bespoke business application specifically for breweries. The main idea was to have a
+                                wide array of stock management options to enable proactive stocking through an Android
+                                application.
+                            </p>
+                            <p>
+                                The final project saw a solid Stock Inventory system written in C# driven by a PHP
+                                RESTful API built upon a MySQL database. A C# Point of Sale application with
+                                order processing was also completed in the same application. Furthermore, an Android
+                                application was also initially developed to handle stock scanning/reading and editing on
+                                the go.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <a class="wrapping-link" href="https://thecodeteam.com/projects/rex-ray/"></a>
+                <div class="grid-item-wrapper">
+                    <div class="grid-item-container">
+                        <div class="grid-image-top">
+                            <img src="{{ asset('img/my_work/modash.jpg') }}"/>
+                            <span class="item-title transform">Business Dashboard <small>(modash)</small></span>
+                        </div>
+                        <div class="grid-item-content">
+                            <p>One of my best projects at the Workwear Outlet was a business reporting dashboard for any
+                                sort of business data which needed reporting. This could be from order processing
+                                statuses, processor health checks, sales reporting, email marketing statistics, etc.
+                            </p>
+                            <p>
+                                The dashboard utilised PHP for the executing of database queries and the data was
+                                displayed in, mostly, CSS grids or JQuery Flotcharts dependant on the data. This made
+                                the dashboard easy display meaningful information to a manager.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+
+{% endblock %}

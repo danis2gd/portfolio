@@ -1,0 +1,73 @@
+/*
+
+    splash page styles
+
+    */
+
+.bg {
+    /* The image used */
+    background-image: url("../img/humber.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* transition on scroll */
+    transition: all 0.3s ease-in-out;
+}
+
+.caption {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.name {
+    font-size: 50px;
+}
+
+#subname {
+    font-size: 26px;
+}
+
+.links .quickInfo {
+    line-height: 50px;
+    height: 50px;
+    margin: 10px 20% 0 20%;
+}
+
+.links img {
+    height: 50px;
+}
+
+.copyrightText {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    #transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+/*
+
+social
+
+*/
+.social-links {
+    margin: 10px 0 0 0;
+}
+
+.social-links img {
+    height: 35px;
+    margin: 5px;
+}

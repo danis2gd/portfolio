@@ -1,0 +1,102 @@
+/* bootstrap */
+
+.navbar-nav {
+    margin: auto;
+    flex-direction: row;
+}
+
+.navbar-collapse {
+    flex-direction: row;
+}
+
+.nav-item.nav-link {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.navbar-brand {
+    position: absolute;
+}
+
+/* my nav */
+
+.header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(236, 236, 236, 0.5);
+}
+
+.contact-link {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: rgba(255,255,255,.5);
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: rgba(255,255,255,.75);
+    text-decoration: none;
+}
+
+.contact-link:focus {
+    text-decoration: none;
+}
+
+/* collapse tool */
+.navbar-toggler {
+    display: none;
+}
+
+@media (max-width: 370px) {
+    .navbar-toggler {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #brandLogo {
+        display: block;
+    }
+
+    #brandName {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    #brandLogo {
+        display: none;
+    }
+}

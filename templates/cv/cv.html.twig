@@ -1,0 +1,26 @@
+{% extends "index.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div class="container p-2">
+        <h2>Curriculum Vitae.</h2>
+        <a href="{{ asset('assets/cv.pdf') }}" target="_blank">
+            <img src="{{ asset('img/cv_placeholder.jpg') }}" />
+        </a>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent()  }}
+
+    <script type="text/javascript">
+        window.onload = window.onload = function() {
+            window.scrollTo(0, 500); // x,y
+        };
+    </script>
+{% endblock %}
