@@ -96,8 +96,6 @@
 
                 }
 
-                //first scroll control
-                //splash page shrinker
                 //social links activation
                 if (document.body.scrollTop > (splash[0].clientHeight / 2) || document.documentElement.scrollTop > (splash[0].clientHeight / 2)) {
                     //document.getElementsByClassName("bg")[0].style.height = "25%";
@@ -108,10 +106,8 @@
                     document.getElementsByClassName("social-bar")[0].style.display = "none";
                 }
             };
-        });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var typed6 = new Typed('#subname', {
+            const typed6 = new Typed('#subname', {
                 strings: ['Developer'],
                 typeSpeed: 101,
                 backSpeed: 0,
