@@ -6,144 +6,6 @@
     {{ parent() }}
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
-    <link href="{{ asset("css/splash.css") }}" rel="stylesheet" />
-    <link href="{{ asset("css/nav.css") }}" rel="stylesheet" />
-    <link href="{{ asset("css/footer.css") }}" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset("css/style.css") }}">
-
-
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .social-bar {
-            background-color: #cacaca;
-            overflow: hidden;
-            position: fixed;
-            bottom: 0;
-            text-align: center;
-            border-radius: 2px 2px 0 0;
-            display: none;
-            z-index: 10000;
-        }
-
-        .social-bar img {
-            height: 35px;
-            margin: 5px;
-        }
-
-        /**
-
-            DEV STYLES
-
-        */
-
-        h2 {
-            margin-top:0;
-        }
-
-        /*
-
-            transition effects
-
-        */
-        .fade-links {
-            opacity: 0.5;  /* Opacity for Modern Browsers */
-            filter: alpha(opacity=50);  /* Opacity for IE8 and lower */
-            zoom: 1;  /* Fix for IE7 */
-        }
-
-        .fade-links:hover {
-            opacity: 1;  /* Opacity for Modern Browsers */
-            filter: alpha(opacity=1);  /* Opacity for IE8 and lower */
-        }
-
-        /*
-            CSS Grid - Features Bar
-        */
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr;
-            grid-template-areas: "item1 item2 item3";
-            margin: 0 20% -20px 20%;
-        }
-
-        .quickInfo {
-            text-align: center;
-            line-height: 100px;
-        }
-
-
-        .item1 {
-            grid-area: item1;
-        }
-
-        .item2 {
-            grid-area: item2;
-        }
-
-        .item3 {
-            grid-area: item3;
-        }
-
-        .item4 {
-            grid-area: item4;
-        }
-
-        .item5 {
-            grid-area: item5;
-        }
-
-        .item6 {
-            grid-area: item5;
-        }
-
-
-        /*
-            CSS Grid - Footer
-        */
-
-        .footer-container {
-            /* formatting */
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas: "item1  item2  item3 " "item4  item5  item6" "siteInfo siteInfo siteInfo";
-
-            /* styling */
-            padding: 0 10% 0 10%;
-            background-color: gray;
-            color: white;
-        }
-
-        .siteInfo {
-            grid-area: siteInfo;
-        }
-
-        .siteInfo > p {
-            text-align: center;
-        }
-
-        /*
-
-        main container styles
-
-        */
-        .mainContainer {
-            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e8e8e8+0,ffffff+100 */
-            background: #e8e8e8; /* Old browsers */
-            background: -moz-linear-gradient(top, #e8e8e8 0%, #ffffff 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(top, #e8e8e8 0%, #ffffff 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom, #e8e8e8 0%, #ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
-        }
-
-    </style>
 {% endblock %}
 
 {% block body %}
@@ -160,15 +22,17 @@
             <span class="name">Daniel Chadwick</span><br>
             <span id="subname"></span><br>
             <div class="social-links">
-                <a class="fade-links show" href="https://www.linkedin.com/in/danieljchadwick/" target="_blank">
-                    <img src="{{ asset('img/social_linkedin.png') }}"/>
-                </a>
-                <a class="fade-links show" href="https://github.com/danis2gd" target="_blank">
-                    <img src="{{ asset('img/social_github.png') }}"/>
-                </a>
-                <a class="fade-links show" href="/cv">
-                    <img src="{{ asset('img/social_cv.png') }}"/>
-                </a>
+                <div class="link-container">
+                    <a class="fade-links show" href="https://www.linkedin.com/in/danieljchadwick/" target="_blank">
+                        <img src="{{ asset('img/social_linkedin.png') }}"/>
+                    </a>
+                    <a class="fade-links show" href="https://github.com/danis2gd" target="_blank">
+                        <img src="{{ asset('img/social_github.png') }}"/>
+                    </a>
+                    <a class="fade-links show" href="/cv">
+                        <img src="{{ asset('img/social_cv.png') }}"/>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -209,11 +73,8 @@
 {% block javascripts %}
     {{ parent() }}
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-
     <script type="text/javascript">
         $(document).ready(function() {
-
             $('#contactModal').on('shown.bs.modal', function () {
                 $('#myInput').trigger('focus')
             });
@@ -251,12 +112,11 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             var typed6 = new Typed('#subname', {
-                strings: ['PHP Developer`'],
+                strings: ['Developer'],
                 typeSpeed: 101,
                 backSpeed: 0,
                 loop: false
             });
         });
-
     </script>
 {% endblock %}

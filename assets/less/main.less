@@ -1,3 +1,83 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "includes/footer";
+@import "includes/nav";
+@import "includes/splash";
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.social-bar {
+    background-color: #cacaca;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    border-radius: 2px 2px 0 0;
+    display: none;
+    z-index: 10000;
+}
+
+.social-bar img {
+    height: 35px;
+    margin: 5px;
+}
+
+h2 {
+    margin-top:0;
+}
+
+/* CSS Grid - Features Bar */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "item1 item2 item3";
+    margin: 0 20% -20px 20%;
+}
+
+.quickInfo {
+    text-align: center;
+    line-height: 100px;
+}
+
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item5;
+}
+
+/* main container styles */
+.mainContainer {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e8e8e8+0,ffffff+100 */
+    background: #e8e8e8; /* Old browsers */
+    background: -moz-linear-gradient(top, #e8e8e8 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e8e8e8 0%, #ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e8e8e8 0%, #ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e8e8', endColorstr='#ffffff', GradientType=0); /* IE6-9 */
+}
+
 /* container help */
 .container img {
     max-width: 100%;

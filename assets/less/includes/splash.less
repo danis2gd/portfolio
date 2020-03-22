@@ -1,12 +1,7 @@
-/*
-
-    splash page styles
-
-    */
-
+/* splash page styles */
 .bg {
     /* The image used */
-    background-image: url("../img/humber.jpg");
+    background-image: url("../../../public/img/humber.jpg");
 
     /* Full height */
     height: 100%;
@@ -18,6 +13,23 @@
 
     /* transition on scroll */
     transition: all 0.3s ease-in-out;
+}
+
+/* transition effects */
+.link-container {
+    width: 150px;
+    margin: auto;
+    height: 40px;
+
+    &:hover {
+        img {
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1.0;
+            }
+        }
+    }
 }
 
 .caption {
@@ -53,16 +65,12 @@
     position: relative;
     top: 50%;
     left: 50%;
-    #transform: translate(-50%, -50%);
+//transform: translate(-50%, -50%);
     text-align: center;
     color: white;
 }
 
-/*
-
-social
-
-*/
+/* social */
 .social-links {
     margin: 10px 0 0 0;
 }
