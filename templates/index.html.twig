@@ -29,7 +29,7 @@
                     <a class="fade-links show" href="https://github.com/danis2gd" target="_blank">
                         <img src="{{ asset('img/social_github.png') }}"/>
                     </a>
-                    <a class="fade-links show" href="/cv">
+                    <a class="fade-links show" href="{{ path('page_cv') }}">
                         <img src="{{ asset('img/social_cv.png') }}"/>
                     </a>
                 </div>
@@ -40,41 +40,29 @@
     <!-- sticky nav -->
     {{ include("inc/nav.html.twig") }}
 
-    <!-- feature container -->
-    <!--
-    <div class="grid-container">
-        <div class="quickInfo item1">
-            Content
-        </div>
-        <div class="quickInfo item2">
-            Content
-        </div>
-        <div class="quickInfo item3">
-            Content
-        </div>
-    </div>
-    -->
-
     <!-- sticky social bar -->
     <div class="social-bar">
-        <a href="#">
+        <a href="https://www.linkedin.com/in/danieljchadwick/" target="_blank">
             <img src="{{ asset('img/social_linkedin.png') }}"/>
         </a>
-        <a href="#">
+        <a href="https://github.com/danis2gd" target="_blank">
             <img src="{{ asset('img/social_github.png') }}"/>
         </a>
-        <a href="#">
+        <a href="{{ path('page_cv') }}">
             <img src="{{ asset('img/social_cv.png') }}"/>
         </a>
     </div>
 
+    {% block page_content %}
+
+    {% endblock page_content %}
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
 
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#contactModal').on('shown.bs.modal', function () {
                 $('#myInput').trigger('focus')
             });
@@ -102,7 +90,7 @@
                     document.getElementsByClassName("social-bar")[0].style.display = "block";
 
                 } else {
-                   // document.getElementsByClassName("bg")[0].style.height = "100%";
+                    // document.getElementsByClassName("bg")[0].style.height = "100%";
                     document.getElementsByClassName("social-bar")[0].style.display = "none";
                 }
             };

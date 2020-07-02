@@ -1,43 +1,16 @@
 {% extends 'index.html.twig' %}
 
-{% block body %}
+{% block javascripts %}
     {{ parent() }}
 
+    {{ encore_entry_script_tags('portfolio') }}
+{% endblock javascripts %}
+
+{% block page_content %}
     <!-- main container -->
     <div class="container p-2">
+        <div id="skillCards" class="grid-row info-row"></div>
         <div class="grid-row info-row">
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="grid-item-content">
-                            <h3 class="item-title">PHP7</h3>
-                            <p>
-                                I was formally introduced to PHP in 2015, but had previous experience using the
-                                language, and have been using it for both professional and personal projects. I started
-                                off with processing scripts for orders, email scheduling, product management and moved
-                                on to Content Management Systems and then onto frameworks such as Symfony.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="grid-item-content">
-                            <h3 class="item-title">SQL</h3>
-                            <p>
-                                I have been using SQL since working at my IT apprenticeship. I was first introduced to
-                                MySQL/MariaDB and PostgreSQL for help storing my data structures for reports, product
-                                management (stock) and email subscriber lists. I have used other SQL variants such as
-                                MSSQL and Oracle whilst studying. I am proficient in creating my own schemas for complex
-                                data systems such as my work recently on an expandable Survey system using Doctrine and
-                                relating it to a MySQL 8.0 database.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="grid-item">
                 <div class="grid-item-wrapper">
                     <div class="grid-item-container">
@@ -231,4 +204,4 @@
             </div>
         </div>
     </div>
-{% endblock %}
+{% endblock page_content %}

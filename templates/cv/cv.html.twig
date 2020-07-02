@@ -2,18 +2,18 @@
 
 {% block stylesheets %}
     {{ parent() }}
-{% endblock %}
 
-{% block body %}
-    {{ parent() }}
+    {{ encore_entry_link_tags('cv') }}
+{% endblock stylesheets %}
 
-    <div class="container p-2">
+{% block page_content %}
+    <div id="cv" class="container p-2">
         <h2>Curriculum Vitae.</h2>
         <a href="{{ asset('assets/cv.pdf') }}" target="_blank">
             <img src="{{ asset('img/cv_placeholder.jpg') }}" />
         </a>
     </div>
-{% endblock %}
+{% endblock page_content %}
 
 {% block javascripts %}
     {{ parent()  }}
@@ -23,4 +23,4 @@
             window.scrollTo(0, 500); // x,y
         };
     </script>
-{% endblock %}
+{% endblock javascripts %}

@@ -14,7 +14,12 @@ Encore
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
 
+    // js imports
     .addEntry('app', './assets/js/app.js')
+    .addEntry('portfolio', './assets/js/portfolio.js')
+
+    // styling imports
+    .addEntry('cv', './assets/less/cv.less')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -41,6 +46,9 @@ Encore
         config.useBuiltIns = 'usage';
         config.corejs = 3;
     })
+    .configureBabel(function(babelConfig) {
+        babelConfig.plugins.push('@babel/plugin-proposal-class-properties');
+    })
 
     .enableLessLoader()
 
@@ -48,8 +56,7 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
 
-    // uncomment if you use API Platform Admin (composer req api-admin)
-    //.enableReactPreset()
+    .enableReactPreset()
 ;
 
 module.exports = Encore.getWebpackConfig();
