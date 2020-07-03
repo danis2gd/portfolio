@@ -10,7 +10,10 @@ use Doctrine\ORM\EntityRepository;
  * Class SkillRepository
  * @package App\Repository
  *
- * @
+ * @method Skill|null find($id, $lockMode = null, $lockVersion = null)()
+ * @method Skill|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Skill[] findAll()
+ * @method Skill[] findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class SkillRepository extends EntityRepository
 {

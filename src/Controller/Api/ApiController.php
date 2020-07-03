@@ -32,7 +32,11 @@ class ApiController extends AbstractController
             ->fetchAll();
 
         return new Response(
-            $this->serializer->serialize($skills, 'json', ['groups' => AnnotationGroups::SKILLS])
+            $this->serializer->serialize(
+                $skills,
+                'json',
+                ['groups' => AnnotationGroups::SKILLS]
+            )
         );
     }
 }
