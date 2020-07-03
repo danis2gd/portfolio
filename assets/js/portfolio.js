@@ -21,7 +21,7 @@ class SkillCards extends Component {
                 },
                 {
                     title: 'JavaScript',
-                    description: 'Originally starting to use JavaScript for simple website modifications for modals and click event handling to much more modern solutions using Webpack. Whilst routing API calls I have used JavaScript to communicate with Symfony APIs to populate dashboard data. Furthermore, I developed a 2D canvas which handled object collisions in vanilla JS - whilst at University. Even this component is driven from React!'
+                    description: 'Originally starting to use JavaScript for simple website modifications for modals and click event handling to much more modern solutions using Webpack. Whilst routing API calls I have used JavaScript to communicate with Symfony APIs to populate dashboard data. Furthermore, I developed a 2D canvas which handled object collisions in vanilla JS - whilst at University. This whole section is a component built with React!'
                 },
                 {
                     title: 'Testing',
@@ -46,7 +46,8 @@ class SkillCards extends Component {
     render() {
         {
             return this.state.grid.map((card, key) => {
-                return <Card key={key} title={card.title} description={card.description} header={card.header !== undefined ? this.props.header : null} />
+                return <Card key={key} title={card.title} description={card.description}
+                             header={card.header !== undefined ? this.props.header : null}/>
             });
         }
     }
@@ -57,11 +58,10 @@ class Card extends Component {
         return (
             <div className="grid-item">
                 <div className="grid-item-wrapper">
-                    <div className="grid-item-container">
-                        {this.props.header !== null ? <CardHeader image={this.props.header.image} title={this.props.header.title} /> : ''}
-                        <div className="grid-item-content">
-                            <CardContent title={this.props.title} description={this.props.description} />
-                        </div>
+                    {this.props.header !== null ?
+                        <CardHeader image={this.props.header.image} title={this.props.header.title}/> : ''}
+                    <div className="grid-item-content">
+                        <CardContent title={this.props.title} description={this.props.description}/>
                     </div>
                 </div>
             </div>

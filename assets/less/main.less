@@ -25,47 +25,25 @@ body, html {
     margin: 5px;
 }
 
-h2 {
-    margin-top:0;
+#about-me {
+    .heading {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
-/* CSS Grid - Features Bar */
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "item1 item2 item3";
-    margin: 0 20% -20px 20%;
+h2 {
+    margin-top: 0;
 }
 
 .quickInfo {
     text-align: center;
     line-height: 100px;
-}
-
-
-.item1 {
-    grid-area: item1;
-}
-
-.item2 {
-    grid-area: item2;
-}
-
-.item3 {
-    grid-area: item3;
-}
-
-.item4 {
-    grid-area: item4;
-}
-
-.item5 {
-    grid-area: item5;
-}
-
-.item6 {
-    grid-area: item5;
 }
 
 /* main container styles */
@@ -83,64 +61,61 @@ h2 {
     max-width: 100%;
 }
 
-
-/* responsive grid */
 .grid-row {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-}
 
-.grid-item {
-    /*height: 550px;*/
-    flex-basis: 33%;
-    -ms-flex: auto;
-    width: 259px;
-    position: relative;
-    padding: 10px;
-    box-sizing: border-box;
-}
+    .grid-item {
+        flex-basis: 33%;
+        -ms-flex: auto;
+        width: 259px;
+        position: relative;
+        padding: 10px;
+        box-sizing: border-box;
 
-.grid-item-content {
-    padding: 20px 20px 20px 20px;
-}
+        .grid-item-wrapper {
+            -webkit-box-sizing: initial;
+            -moz-box-sizing: initial;
+            box-sizing: initial;
+            background: #ececec;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            -webkit-transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: padding 0.15s cubic-bezier(0.4, 0, 0.2, 1), margin 0.15s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
 
-.grid-item-wrapper {
-    -webkit-box-sizing: initial;
-    -moz-box-sizing: initial;
-    box-sizing: initial;
-    background: #ececec;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    -webkit-transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
-    transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
-    position: relative;
-}
+            .grid-image-top {
+                position: relative;
 
-.grid-image-top {
-    position: relative;
-}
+                img {
+                    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
+                    filter: blur(2px);
+                }
 
-.grid-image-top img {
-    -webkit-filter: blur(2px); /* Safari 6.0 - 9.0 */
-    filter: blur(2px);
-}
+                .item-title {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    line-height: 26px;
+                    margin: 10px;
+                }
+            }
 
-.item-title {
-    font-size: 24px;
-    text-align: center;
-    font-weight: 700;
-}
+            .grid-item-content {
+                padding: 20px;
+            }
 
-.grid-image-top > .item-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    line-height: 26px;
-    margin: 10px;
+            .item-title {
+                font-size: 24px;
+                text-align: center;
+                font-weight: 700;
+            }
+        }
+    }
 }
 
 /** responsive design */
