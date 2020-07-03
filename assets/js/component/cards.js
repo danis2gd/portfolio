@@ -12,7 +12,7 @@ class Cards extends Component {
     }
 
     componentDidMount() {
-        fetch('/api/skills')
+        fetch('/api/' + this.props.endpoint)
             .then(res => res.json())
             .then(
                 (result) => {
