@@ -1,31 +1,39 @@
 /* CSS Grid - Footer */
 
 .footer-container {
-    /* formatting */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "item1  item2  item3 " "item4  item5  item6" "siteInfo siteInfo siteInfo";
 
-    /* styling */
-    padding: 0 10% 0 10%;
+    padding: 20px 10% 20px 10%;
     background-color: gray;
     color: white;
+
+    .site-info {
+        grid-area: siteInfo;
+
+        > p {
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    .footer-brand {
+        text-align: center;
+        padding: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            margin-right: 6px;
+        }
+
+        span {
+            padding: 1px;
+        }
+    }
 }
 
-.siteInfo {
-    grid-area: siteInfo;
-}
-
-.siteInfo > p {
-    text-align: center;
-}
-
-.footerBrand {
-    text-align: center;
-    padding: 10px;
-}
-
-.footerBrand span {
-    padding:1px;
-}
