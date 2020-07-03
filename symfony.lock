@@ -112,7 +112,7 @@
         "version": "2.1.1"
     },
     "php": {
-        "version": "7.2"
+        "version": "7.3"
     },
     "phpdocumentor/reflection-common": {
         "version": "1.0.1"
@@ -214,6 +214,9 @@
     "symfony/dependency-injection": {
         "version": "v4.3.1"
     },
+    "symfony/deprecation-contracts": {
+        "version": "v2.1.2"
+    },
     "symfony/doctrine-bridge": {
         "version": "v4.3.1"
     },
@@ -302,9 +305,6 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
-    "symfony/mime": {
-        "version": "v4.3.1"
-    },
     "symfony/monolog-bridge": {
         "version": "v4.3.1"
     },
@@ -344,11 +344,17 @@
             "tests/.gitignore"
         ]
     },
+    "symfony/polyfill-intl-grapheme": {
+        "version": "v1.17.1"
+    },
     "symfony/polyfill-intl-icu": {
         "version": "v1.11.0"
     },
     "symfony/polyfill-intl-idn": {
         "version": "v1.11.0"
+    },
+    "symfony/polyfill-intl-normalizer": {
+        "version": "v1.17.1"
     },
     "symfony/polyfill-mbstring": {
         "version": "v1.11.0"
@@ -358,6 +364,9 @@
     },
     "symfony/polyfill-php73": {
         "version": "v1.11.0"
+    },
+    "symfony/polyfill-php80": {
+        "version": "v1.17.1"
     },
     "symfony/process": {
         "version": "v4.3.1"
@@ -421,6 +430,9 @@
     },
     "symfony/stopwatch": {
         "version": "v4.3.1"
+    },
+    "symfony/string": {
+        "version": "v5.1.2"
     },
     "symfony/swiftmailer-bundle": {
         "version": "2.5",
