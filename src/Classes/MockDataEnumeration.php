@@ -28,7 +28,7 @@ class MockDataEnumeration
         ],
         [
             'title' => 'AMQP',
-            'description' => 'I learnt the fundamentals of AMQP whilst working for Wren Kitchens and using messages for queuing background processes. Worked on processes mainly related to file upload and processing. This was implemented using RabbitMQ broker.\n'
+            'description' => 'I learnt the fundamentals of AMQP whilst working for Wren Kitchens and using messages for queuing background processes. Worked on processes mainly related to file upload and processing. This was implemented using RabbitMQ broker.'
         ],
         [
             'title' => 'AWS',
