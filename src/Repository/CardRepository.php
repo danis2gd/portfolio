@@ -26,8 +26,7 @@ class CardRepository extends EntityRepository
         $eb = $qb->expr();
 
         return $qb
-            ->from(Card::class, 'class')
-            ->where($eb->eq('class.cardType', ':cardType'))
+            ->where($eb->eq('card.cardType', ':cardType'))
             ->setParameters([
                 'cardType' => Card::SKILL
             ])
@@ -44,8 +43,7 @@ class CardRepository extends EntityRepository
         $eb = $qb->expr();
 
         return $qb
-            ->from(Card::class, 'class')
-            ->where($eb->eq('class.cardType', ':cardType'))
+            ->where($eb->eq('card.cardType', ':cardType'))
             ->setParameters([
                 'cardType' => Card::WORK
             ])

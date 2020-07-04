@@ -41,46 +41,5 @@
     <div class="container p-4 mt-1">
         <h3>My Work</h3>
         <div id="workCards" class="grid-row info-row"></div>
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="grid-image-top">
-                            <img src="{{ asset('img/my_work/csv_upload_modified.png') }}"/>
-                            <span class="item-title transform">CSV Parser</span>
-                        </div>
-                        <div class="grid-item-content">
-                            <p>As part of my Graduate training scheme at Wren Kitchens I developed a product descriptions CSV parser which utilised: Symfony (PHP7) for the stack, RabbitMQ for handing off of the parsing process, Elastic for searching through product descriptions, and SQL for the data persistence.</p><p>Also utilised was JavaScript for file upload handling and AJAX hand-off. For styling, CSS/LESS was used to manage stylesheets all through Webpack Encore.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="grid-image-top">
-                            <img src="{{ asset('img/my_work/siapos.PNG') }}"/>
-                            <span class="item-title transform">Brewery Management System</span>
-                        </div>
-                        <div class="grid-item-content">
-                            <span class="item-sub-title" style="display:none;">Stock Inventory and Point of Sale Application</span>
-                            <p>As part of my dissertation, whilst studying at the University of Hull, I completed a bespoke business application specifically for breweries. The main idea was to have a wide array of stock management options to enable proactive stocking through an Android application.</p><p>The final project saw a solid Stock Inventory system written in C# driven by a PHP RESTful API built upon a MySQL database. A C# Point of Sale application with order processing was also completed in the same application. Furthermore, an Android application was also initially developed to handle stock scanning/reading and editing on the go.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item">
-                <div class="grid-item-wrapper">
-                    <div class="grid-item-container">
-                        <div class="grid-image-top">
-                            <img src="{{ asset('img/my_work/modash.jpg') }}"/>
-                            <span class="item-title transform">Business Dashboard <small>(modash)</small></span>
-                        </div>
-                        <div class="grid-item-content">
-                            <p>One of my best projects at the Workwear Outlet was a business reporting dashboard for any sort of business data which needed reporting. This could be from order processing statuses, processor health checks, sales reporting, email marketing statistics, etc.</p><p>The dashboard utilised PHP for the executing of database queries and the data was displayed in, mostly, CSS grids or JQuery Flotcharts dependant on the data. This made the dashboard easy display meaningful information to a manager.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 {% endblock page_content %}
