@@ -5,5 +5,6 @@ namespace App\Classes;
 
 class AnnotationGroups
 {
-    public const SKILLS = 'SKILLS';
+    public const SKILLS_DATA = 'SKILLS_DATA';
+    public const WORK_DATA = 'WORK_DATA';
 }

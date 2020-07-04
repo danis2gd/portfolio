@@ -1,0 +1,1 @@
+php bin/console fos:js-routing:dump --format=json

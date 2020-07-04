@@ -1,4 +1,6 @@
-import React, {Component} from "react";
+import React, {Component} from 'react';
+import Routing from '../inc/router.js';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
 class Cards extends Component {
     constructor(props) {
@@ -12,7 +14,7 @@ class Cards extends Component {
     }
 
     componentDidMount() {
-        fetch('/api/' + this.props.endpoint)
+        fetch(Routing.generate(this.props.endpoint))
             .then(res => res.json())
             .then(
                 (result) => {
@@ -33,8 +35,12 @@ class Cards extends Component {
     render() {
         {
             return this.state.items.map((card, key) => {
-                return <Card key={key} title={card.title} description={card.description}
-                             header={card.header !== undefined ? this.props.header : null}/>
+                return <Card key={key}
+                             title={card.title}
+                             description={card.description}
+                             imagePath={card.imagePath}
+                             subTitle={card.subTitle}
+                />
             });
         }
     }
@@ -45,10 +51,13 @@ class Card extends Component {
         return (
             <div className="grid-item">
                 <div className="grid-item-wrapper">
-                    {this.props.header !== null ?
-                        <CardHeader image={this.props.header.image} title={this.props.header.title}/> : ''}
+                    <CardHeader
+                        imagePath={this.props.imagePath}
+                        title={this.props.title}
+                        subTitle={this.props.subTitle}
+                    />
                     <div className="grid-item-content">
-                        <CardContent title={this.props.title} description={this.props.description}/>
+                        <CardContent description={this.props.description}/>
                     </div>
                 </div>
             </div>
@@ -60,8 +69,8 @@ class CardHeader extends Component {
     render() {
         return (
             <div className="grid-image-top">
-                <CardImage image={this.props.image}/>
-                <CardHeaderTitle title={this.props.title}/>
+                <CardImage imagePath={this.props.imagePath} />
+                <CardHeaderTitle title={this.props.title} subTitle={this.props.subTitle} />
             </div>
         );
     }
@@ -71,7 +80,7 @@ class CardImage extends Component {
     render() {
         return (
             <div>
-                <img src={this.props.image}/>
+                <img src={this.props.imagePath} />
             </div>
         )
     }
@@ -81,7 +90,7 @@ class CardHeaderTitle extends Component {
     render() {
         return (
             <div>
-                <span className="item-title transform">{this.props.title}</span>
+                <span className="item-title transform">{this.props.title} <small>{this.props.subTitle}</small></span>
             </div>
         )
     }
@@ -91,7 +100,6 @@ class CardContent extends Component {
     render() {
         return (
             <div>
-                <CardTitle title={this.props.title}/>
                 <CardDescription description={this.props.description}/>
             </div>
         );
@@ -110,11 +118,7 @@ class CardTitle extends Component {
 
 class CardDescription extends Component {
     render() {
-        return (
-            <p>
-                {this.props.description}
-            </p>
-        );
+        return <div>{ ReactHtmlParser(this.props.description) }</div>;
     }
 }
 
