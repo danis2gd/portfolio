@@ -57,6 +57,7 @@ class Card extends Component {
                         subTitle={this.props.subTitle}
                     />
                     <div className="grid-item-content">
+                        <CardHeaderTitle title={this.props.title} subTitle={this.props.subTitle} />
                         <CardContent description={this.props.description}/>
                     </div>
                 </div>
@@ -70,7 +71,6 @@ class CardHeader extends Component {
         return (
             <div className="grid-image-top">
                 <CardImage imagePath={this.props.imagePath} />
-                <CardHeaderTitle title={this.props.title} subTitle={this.props.subTitle} />
             </div>
         );
     }
@@ -89,7 +89,7 @@ class CardImage extends Component {
 class CardHeaderTitle extends Component {
     render() {
         return (
-            <div>
+            <div className="text-center">
                 <span className="item-title transform">{this.props.title} <small>{this.props.subTitle}</small></span>
             </div>
         )

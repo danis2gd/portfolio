@@ -1,0 +1,22 @@
+.link
+{
+	&--primary
+	{
+		@apply text-white;
+
+		&:hover
+		{
+			@apply underline text-theme-primary;
+		}
+	}
+	
+	&--no-hover
+	{
+		@apply no-underline;
+		
+		&:hover
+		{
+			@apply no-underline;
+		}
+	}
+}

@@ -39,6 +39,12 @@ Encore
 
     .enableLessLoader()
     .enableReactPreset()
+
+    .enablePostCssLoader(function(options) {
+        options.config = {
+            path: 'postcss.config.js',
+        }
+    })
 ;
 
 module.exports = Encore.getWebpackConfig();

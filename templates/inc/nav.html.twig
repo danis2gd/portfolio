@@ -1,37 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="{{ path('page_index') }}">
-        <span id="brandName">Daniel Chadwick</span>
-        <span id="brandLogo">
-            <img src="{{ asset('img/brand_logo.png') }}" width="30" height="30" alt="">
-        </span>
-    </a>
-    <div class="navbar-nav">
-        <a class="nav-item nav-link {{ app.request.get('_route') == 'page_index' ? 'active' }}" href="{{ path('page_index') }}">Home</a>
-        <a class="nav-item nav-link {{ app.request.get('_route') == 'page_cv' ? 'active' }}" href="{{ path('page_cv') }}">CV</a>
-        <button type="button" class="btn btn-link contact-link" data-toggle="modal" data-target="#contactModal">Contact</button>
-    </div>
-</nav>
+<nav class="navbar w-full bg-gray-dark z-overlay min-h-60">
+    <div class="container flex items-center justify-between flex-wrap p-6">
+        <div class="flex items-center flex-no-shrink mr-3">
+            <a class="link--primary link--no-hover flex flex-row fill-current hover:no-underline hover:text-white"
+               href="{{ path('app_index') }}">
+                <img class="hidden" src="{{ asset('img/brand_logo.png') }}" width="30" height="30" alt="">
 
-{% include('inc/_contact.html.twig') %}
+                <span class="font-semibold text-xl tracking-tight">Daniel Chadwick</span>
+            </a>
+        </div>
 
-<!--
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="#">Daniel Chadwick</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="{{ path('page_index') }}#">Home</a>
-            <a class="nav-item nav-link" href="{{ path('page_cv') }}">CV</a>
-            <a class="nav-item nav-link" href="#">Contact</a>
+        <div class="w-auto flex-grow lg:flex lg:items-center">
+            <div class="text-sm lg:flex-grow">
+                <a href="{{ path('app_index') }}" class="link--primary inline-block mx-2 text-center">
+                    Home
+                </a>
+                <a href="{{ path('app_cv') }}" class="link--primary inline-block mx-2 text-center">
+                    CV
+                </a>
+            </div>
         </div>
     </div>
 </nav>
 
-<div id="navbar">
-    <a id="home" href="/">Home</a>
-    <a id="cv" href="/cv">CV</a>
-    <a href="javascript:void(0)">Contact</a>
-</div>
--->
+{% include('inc/_contact.html.twig') %}
