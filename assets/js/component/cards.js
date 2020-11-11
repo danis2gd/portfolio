@@ -89,7 +89,7 @@ class CardImage extends Component {
 class CardHeaderTitle extends Component {
     render() {
         return (
-            <div className="text-center">
+            <div className="text-center mb-1">
                 <span className="item-title transform">{this.props.title} <small>{this.props.subTitle}</small></span>
             </div>
         )

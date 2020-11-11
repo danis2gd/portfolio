@@ -12,12 +12,8 @@ $(document).ready(function() {
 
         if ((window.pageYOffset + 30) >= splash[0].clientHeight) {
             navbar[0].classList.add("sticky");
-
-            $('.info-row').css('margin-top', '40px');
         } else {
             navbar[0].classList.remove("sticky");
-            $('.info-row').css('margin-top', '0');
-
         }
 
         //social links activation
