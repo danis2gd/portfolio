@@ -29,7 +29,7 @@
                     <a class="fade-links show" href="https://github.com/danis2gd" target="_blank">
                         <img src="{{ asset('img/social_github.png') }}"/>
                     </a>
-                    <a class="fade-links show" href="{{ path('page_cv') }}">
+                    <a class="fade-links show" href="{{ path('app_cv') }}">
                         <img src="{{ asset('img/social_cv.png') }}"/>
                     </a>
                 </div>
@@ -48,7 +48,7 @@
         <a href="https://github.com/danis2gd" target="_blank">
             <img src="{{ asset('img/social_github.png') }}"/>
         </a>
-        <a href="{{ path('page_cv') }}">
+        <a href="{{ path('app_cv') }}">
             <img src="{{ asset('img/social_cv.png') }}"/>
         </a>
     </div>
@@ -76,18 +76,14 @@
 
                 if ((window.pageYOffset + 30) >= splash[0].clientHeight) {
                     navbar[0].classList.add("sticky");
-
-                    $('.info-row').css('margin-top', '40px');
                 } else {
                     navbar[0].classList.remove("sticky");
-                    $('.info-row').css('margin-top', '0');
-
                 }
 
                 //social links activation
                 if (document.body.scrollTop > (splash[0].clientHeight / 2) || document.documentElement.scrollTop > (splash[0].clientHeight / 2)) {
                     //document.getElementsByClassName("bg")[0].style.height = "25%";
-                    document.getElementsByClassName("social-bar")[0].style.display = "block";
+                    document.getElementsByClassName("social-bar")[0].style.display = "inherit";
 
                 } else {
                     // document.getElementsByClassName("bg")[0].style.height = "100%";

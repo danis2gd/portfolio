@@ -8,16 +8,16 @@
 
 {% block page_content %}
     <!-- main container -->
-    <div class="container p-2">
+    <div class="container p-2 mx-auto">
         <div id="skillCards" class="grid-row info-row"></div>
     </div>
 
     <!-- about me -->
-    <div id="about-me" class="container-fluid bg-dark text-light">
-        <div class="about-content p-5">
-            <h2 class="heading">About Me</h2>
+    <div id="about-me" class="container-fluid bg-gray-dark text-white">
+        <div class="about-content p-5 sm:p-12">
+            <h2 class="heading text-2xl">About Me</h2>
             <p>
-                Junior Developer at Wren Kitchens working with mainly PHP7/Symfony, LESS/CSS, JavaScript, Twig/HTML,
+                Developer at Wren Kitchens working with mainly PHP7/Symfony, LESS/CSS, JavaScript, Twig/HTML,
                 MySQL on a variety of internal and external services. Also experienced using Doctrine ORM, PHPUnit,
                 Behat, RabbitMQ, AWS, Docker, and Elasticsearch.
             </p>
@@ -37,8 +37,11 @@
         </div>
     </div>
 
-    <div class="container p-4 mt-1">
-        <h3>My Work</h3>
+    <div class="container p-4 mt-1 mx-auto">
+        <h3 class="heading text-2xl text-center mb-3">
+            My Work
+        </h3>
+
         <div id="workCards" class="grid-row info-row"></div>
     </div>
 {% endblock page_content %}

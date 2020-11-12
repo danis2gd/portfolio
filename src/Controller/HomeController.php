@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="page_index")
+     * @Route("/", name="app_index")
      */
     public function index(): Response
     {
@@ -19,7 +19,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/cv", name="page_cv")
+     * @Route("/cv", name="app_cv")
      */
     public function cv(): Response
     {
