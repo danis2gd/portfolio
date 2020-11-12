@@ -1,23 +1,23 @@
 <nav class="navbar w-full bg-gray-dark z-overlay min-h-60">
     <div class="container flex items-center justify-between flex-wrap p-6">
-        <div class="flex items-center flex-no-shrink mr-3">
-            <a class="link--primary link--no-hover flex flex-row fill-current"
+        <div class="w-full sm:w-auto mb-3 sm:mb-0 items-center flex-no-shrink sm:mr-3">
+            <a class="link--primary link--no-hover flex flex-row fill-current justify-center"
                href="{{ path('app_index') }}">
                 <img class="hidden" src="{{ asset('img/brand_logo.png') }}" width="30" height="30" alt="">
 
-                <span class="font-semibold text-xl tracking-tight">Daniel Chadwick</span>
+                <span class="font-semibold text-xl tracking-tight">
+                    Daniel Chadwick
+                </span>
             </a>
         </div>
 
-        <div class="w-auto flex-grow lg:flex lg:items-center">
-            <div class="text-sm lg:flex-grow">
-                <a href="{{ path('app_index') }}" class="link--primary inline-block mx-2 text-center">
-                    Home
-                </a>
-                <a href="{{ path('app_cv') }}" class="link--primary inline-block mx-2 text-center">
-                    CV
-                </a>
-            </div>
+        <div class="w-auto flex-grow flex justify-center sm:justify-start">
+            <a href="{{ path('app_index') }}" class="link--primary inline-block mx-2 text-center">
+                Home
+            </a>
+            <a href="{{ path('app_cv') }}" class="link--primary inline-block mx-2 text-center">
+                CV
+            </a>
         </div>
     </div>
 </nav>
