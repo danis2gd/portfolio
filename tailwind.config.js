@@ -11,6 +11,9 @@ module.exports = {
             borderRadius: {
                 xl: '0.9rem',
             },
+            bottom: {
+                '1/2': '50%',
+            },
             colors: {
                 gray: {
                     lightest: '#EFEFEF',
@@ -21,10 +24,11 @@ module.exports = {
                 black: {
                     dark: '#2a2a2a',
                     darkest: '#000000',
+                    base: '#000000',
                 },
                 theme: {
                     primary: '#FF7D12',
-                    dark: '#b35708'
+                    dark: '#b35708',
                 },
             },
             height: {
@@ -39,6 +43,8 @@ module.exports = {
                 xl: '1100px',
             },
             margin: {
+                '-17r': '-17rem',
+                '28': '7rem',
                 '60': '60px',
                 '75': '75px',
             },
@@ -49,8 +55,12 @@ module.exports = {
                 '400': '400px'
             },
             maxHeight: {
+                '4r': '4rem',
                 '300': '300px',
                 '400': '400px',
+            },
+            maxWidth: {
+                '4r': '4rem',
             },
             zIndex: {
                 base: 0,
