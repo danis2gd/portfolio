@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Repository;
 
 use App\Entity\Card;
+use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\EntityRepository;
 
 /**
@@ -43,10 +44,16 @@ class CardRepository extends EntityRepository
         $eb = $qb->expr();
 
         return $qb
-            ->where($eb->eq('card.cardType', ':cardType'))
+            ->addSelect('technologyMap', 'technology')
+            ->leftJoin('card.technologies', 'technologyMap')
+            ->leftJoin('technologyMap.technology', 'technology')
+            ->andWhere(
+                $eb->eq('card.cardType', ':cardType')
+            )
             ->setParameters([
                 'cardType' => Card::WORK
             ])
+            ->orderBy('technologyMap.displayOrder', Criteria::ASC)
             ->getQuery()
             ->getResult();
     }

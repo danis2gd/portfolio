@@ -31,8 +31,8 @@ Encore
     .configureBabelPresetEnv((config) => {
         config.useBuiltIns = 'usage';
         config.corejs = 3;
-
     })
+
     .configureBabel(function(babelConfig) {
         babelConfig.plugins.push('@babel/plugin-proposal-class-properties');
     })
@@ -41,7 +41,7 @@ Encore
     .enableReactPreset()
 
     .enablePostCssLoader(function(options) {
-        options.config = {
+        options.postcssOptions = {
             path: 'postcss.config.js',
         }
     })

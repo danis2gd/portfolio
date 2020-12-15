@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Routing from '../inc/router.js';
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import {ReactSVG} from "react-svg";
+import ReactTooltip from "react-tooltip";
 
 class Cards extends Component {
     constructor(props) {
@@ -35,12 +37,15 @@ class Cards extends Component {
     render() {
         {
             return this.state.items.map((card, key) => {
-                return <Card key={key}
-                             title={card.title}
-                             description={card.description}
-                             imagePath={card.imagePath}
-                             subTitle={card.subTitle}
-                />
+                return (
+                    <Card key={key}
+                        title={card.title}
+                        description={card.description}
+                        imagePath={card.imagePath}
+                        subTitle={card.subTitle}
+                        technologies={card.technologies}
+                    />
+                );
             });
         }
     }
@@ -57,6 +62,7 @@ class Card extends Component {
                         subTitle={this.props.subTitle}
                     />
                     <div className="grid-item-content">
+                        <CardTechnologies technologies={this.props.technologies} />
                         <CardHeaderTitle title={this.props.title} subTitle={this.props.subTitle} />
                         <CardContent description={this.props.description}/>
                     </div>
@@ -112,7 +118,47 @@ class CardTitle extends Component {
             <h3 className="item-title">
                 {this.props.title}
             </h3>
-        )
+        );
+    }
+}
+
+class CardTechnologies extends Component {
+    render() {
+        if (!this.props.technologies) {
+            return null;
+        }
+
+        return (
+            <div className="flex justify-center mb-3">
+                {this.props.technologies.map((technology, key) => {
+                    return (
+                        <CardTechnology
+                            key={key}
+                            technology={technology}
+                        />
+                    );
+                })}
+            </div>
+        );
+    }
+}
+
+class CardTechnology extends Component {
+    render() {
+        const technology = this.props.technology.technology;
+
+        return (
+            <div className="w-8 mx-1">
+                <ReactSVG
+                    data-tip data-for={`technologyTip-${technology.handle}`}
+                    src={`img/svg/${technology.handle}.svg`}
+                />
+
+                <ReactTooltip id={`technologyTip-${technology.handle}`}>
+                    { technology.name }
+                </ReactTooltip>
+            </div>
+        );
     }
 }
 
