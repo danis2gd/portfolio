@@ -1,10 +1,5 @@
 module.exports = {
-    future: {
-        // removeDeprecatedGapUtilities: true,
-        // purgeLayersByDefault: true,
-        // defaultLineHeights: true,
-        // standardFontWeights: true
-    },
+    darkMode: 'class',
     purge: [],
     theme: {
         extend: {
@@ -43,7 +38,10 @@ module.exports = {
                 xl: '1100px',
             },
             margin: {
+                '-8r': '-8rem',
+                '-11r': '-11rem',
                 '-17r': '-17rem',
+                '18': '4.5rem',
                 '28': '7rem',
                 '60': '60px',
                 '75': '75px',
@@ -52,7 +50,7 @@ module.exports = {
                 '25': '25px',
                 '60': '60px',
                 '300': '300px',
-                '400': '400px'
+                '400': '400px',
             },
             maxHeight: {
                 '4r': '4rem',

@@ -1,6 +1,11 @@
 .about-container
 {
-	@apply pb-40 sm:pb-32 mb-28 bg-gray-dark text-white;
+	@apply pt-2 pb-40 sm:pb-32 mb-28 bg-gray-dark text-white;
+	
+	&.padded
+	{
+		@apply mt-28 pt-5 sm:mt-18;
+	}
 }
 
 .about-content
@@ -10,7 +15,7 @@
 	
 	.heading
 	{
-		@apply text-3xl text-center mb-12;
+		@apply text-2xl text-center mb-5 pt-3;
 	}
 	
 	p
@@ -30,7 +35,7 @@
 
 	.attribute
 	{
-		@apply w-full md:w-1/3 px-8 py-12 pb-0 lg:pb-8 text-black-base border-r border-gray-light;
+		@apply w-full md:w-1/3 px-8 py-12 pb-0 lg:pb-8 text-black-base sm:border-r sm:border-gray-light;
 		
 		&:last-child
 		{
@@ -45,14 +50,19 @@
 			}
 		}
 		
+		.heading
+		{
+			@apply text-center pb-2 font-black;
+		}
+		
 		h2.heading
 		{
-			@apply text-xl text-center pb-2;
+			@apply text-xl;
 		}
 		
 		h3.heading
 		{
-			@apply text-base text-center pb-2 font-black;
+			@apply text-base;
 		}
 		
 		.text
