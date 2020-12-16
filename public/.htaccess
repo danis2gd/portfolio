@@ -27,8 +27,6 @@
 </IfModule>
 # END cPanel-generated php ini directives, do not edit
 
-#    /home/ballersb/portfolio.danielchadwick.co.uk/portfolio/public
-
 <IfModule mod_rewrite.c>
     Options -MultiViews
     RewriteEngine On
