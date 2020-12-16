@@ -72,14 +72,14 @@
                 //navbar scroll effect
                 const navbar = document.querySelector('.navbar');
                 const splash = document.querySelector('.bg');
-                const aboutContainer = document.querySelector('.about-container');
+                const container = document.querySelector('.initial-container');
 
                 if ((window.pageYOffset) >= splash.clientHeight) {
                     navbar.classList.add('sticky');
-                    aboutContainer.classList.add('padded');
+                    container.classList.add('padded');
                 } else {
                     navbar.classList.remove('sticky');
-                    aboutContainer.classList.remove('padded');
+                    container.classList.remove('padded');
                 }
 
                 //social links activation

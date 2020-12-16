@@ -50,6 +50,29 @@ VALUES
     ('CSV Parser', '<p>As part of my Graduate training scheme at Wren Kitchens I developed a product descriptions CSV parser which utilised: Symfony (PHP7) for the stack, RabbitMQ for handing off of the parsing process, Elastic for searching through product descriptions, and SQL for the data persistence.</p><p>Also utilised was JavaScript for file upload handling and AJAX hand-off. For styling, CSS/LESS was used to manage stylesheets all through Webpack Encore.</p>', null, 'img/my_work/csv_upload_modified.png', 'WORK'),
     ('Brewery Management System', '<p>As part of my dissertation, whilst studying at the University of Hull, I completed a bespoke business application specifically for breweries. The main idea was to have a wide array of stock management options to enable proactive stocking through an Android application.</p><p>The final project saw a solid Stock Inventory system written in C# driven by a PHP RESTful API built upon a MySQL database. A C# Point of Sale application with order processing was also completed in the same application. Furthermore, an Android application was also initially developed to handle stock scanning/reading and editing on the go.</p>', null, 'img/my_work/siapos.PNG', 'WORK'),
     ('Business Dashboard', '<p>One of my best projects at the Workwear Outlet was a business reporting dashboard for any sort of business data which needed reporting. This could be from order processing statuses, processor health checks, sales reporting, email marketing statistics, etc.</p><p>The dashboard utilised PHP for the executing of database queries and the data was displayed in, mostly, CSS grids or JQuery Flotcharts dependant on the data. This made the dashboard easy display meaningful information to a manager.</p>', '(modash)', 'img/my_work/modash.jpg', 'WORK'),
-    ('Events', '<p>A simple way to have your mates pay for a group booking. A side project I started to try out the latest libraries such as TailwindCSS, Symfony Framework 5 and React.</p>', null, 'img/my_work/events.jpg', 'WORK');
+    ('Events', '<p>A simple way to have your mates pay for a group booking. A side project I started to try out the latest libraries such as TailwindCSS, Symfony Framework 5 and React.</p>', null, 'img/my_work/events.png', 'WORK');
+
+INSERT INTO tblTechnology
+    (strName, strHandle)
+VALUES
+    ('PHP', 'PHP'),
+    ('React', 'REACT'),
+    ('TailwindCSS', 'TAILWIND'),
+    ('Symfony 5', 'SYMFONY');
+
+SET @EVENTS = (SELECT intCardId FROM tblCard WHERE strTitle = 'Events');
+
+SET @PHP = (SELECT intTechnologyId FROM tblTechnology WHERE strHandle = 'PHP');
+SET @REACT = (SELECT intTechnologyId FROM tblTechnology WHERE strHandle = 'REACT');
+SET @TAILWIND = (SELECT intTechnologyId FROM tblTechnology WHERE strHandle = 'TAILWIND');
+SET @SYMFONY = (SELECT intTechnologyId FROM tblTechnology WHERE strHandle = 'SYMFONY');
+
+INSERT INTO tblCardTechnology
+    (intCardId, intTechnologyId, intDisplayOrder)
+VALUES
+    (@EVENTS, @PHP, 10),
+    (@EVENTS, @REACT, 20),
+    (@EVENTS, @TAILWIND, 30),
+    (@EVENTS, @SYMFONY, 40);
 
 COMMIT;

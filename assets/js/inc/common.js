@@ -5,25 +5,26 @@ $(document).ready(function() {
 
     window.onscroll = function () {
         //navbar scroll effect
-        var navbar = $('.navbar');
-        var splash = $('.bg');
-        var brand = $('.navbar-brand');
-        var sticky = navbar.offsetTop;
+        const navbar = document.querySelector('.navbar');
+        const splash = document.querySelector('.bg');
+        const container = document.querySelector('.initial-container');
 
-        if ((window.pageYOffset + 30) >= splash[0].clientHeight) {
-            navbar[0].classList.add("sticky");
+        if ((window.pageYOffset) >= splash.clientHeight) {
+            navbar.classList.add('sticky');
+            container.classList.add('padded');
         } else {
-            navbar[0].classList.remove("sticky");
+            navbar.classList.remove('sticky');
+            container.classList.remove('padded');
         }
 
         //social links activation
-        if (document.body.scrollTop > (splash[0].clientHeight / 2) || document.documentElement.scrollTop > (splash[0].clientHeight / 2)) {
+        if (document.body.scrollTop > (splash.clientHeight / 2) || document.documentElement.scrollTop > (splash.clientHeight / 2)) {
             //document.getElementsByClassName("bg")[0].style.height = "25%";
-            document.getElementsByClassName("social-bar")[0].style.display = "block";
+            document.getElementsByClassName('social-bar')[0].style.display = 'inherit';
 
         } else {
             // document.getElementsByClassName("bg")[0].style.height = "100%";
-            document.getElementsByClassName("social-bar")[0].style.display = "none";
+            document.getElementsByClassName('social-bar')[0].style.display = 'none';
         }
     };
 
