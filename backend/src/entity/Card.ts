@@ -1,4 +1,4 @@
-import { BaseEntity, Entity, Enum, PrimaryKey, Property } from "@mikro-orm/core";
+import { BaseEntity, Entity, Enum, PrimaryKey, Property, Unique } from "@mikro-orm/core";
 import { CardType } from "../enum/CardType";
 import { Technology } from "../enum/Technology";
 
@@ -21,6 +21,10 @@ export class Card extends BaseEntity<Card, "_id"> {
 
     @Property()
     description!: string;
+
+    @Property()
+    @Unique()
+    displayOrder!: number;
 
     @Enum({ items: () => Technology, array: true, default: [] })
     technologies: Technology[];
