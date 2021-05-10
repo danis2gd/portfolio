@@ -1,0 +1,9 @@
+import { Card } from "./src/entity/Card";
+
+export default {
+    entities: [
+        Card
+    ],
+    dbName: "portfolio",
+    type: "postgresql",
+};
