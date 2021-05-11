@@ -1,6 +1,7 @@
-import { Args, Int, Query, ResolveField, Resolver } from "@nestjs/graphql";
+import { Args, Int, Query, Resolver } from "@nestjs/graphql";
 import { Card } from "../entity/Card/Card";
 import { CardService } from "../service/Card.service";
+import { CardType } from "../enum/CardType";
 
 @Resolver(of => Card)
 export class CardResolver {
@@ -9,13 +10,14 @@ export class CardResolver {
     ) {}
 
     @Query(returns => Card)
-    async card(@Args('id', { type: () => Int }) id: number): Promise<Card> {
-        return this.cardService.getOneById(id);
+    async card(@Args('_id', { type: () => Int }) id: number): Promise<Card> {
+        return await this.cardService.getOneById(id);
     }
 
     @Query(returns => [Card])
-    async cards(): Promise<Card[]>
-    {
-        return this.cardService.getAll();
+    async cards(
+        @Args('cardType', { type: () => String }) cardType?: CardType
+    ): Promise<Card[]> {
+        return await this.cardService.getAll(cardType);
     }
 }
