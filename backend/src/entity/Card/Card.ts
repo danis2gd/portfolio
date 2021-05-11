@@ -1,13 +1,11 @@
 import { BaseEntity, Entity, Enum, PrimaryKey, Property, Unique } from "@mikro-orm/core";
-import { CardType } from "../enum/CardType";
-import { Technology } from "../enum/Technology";
+import { CardType } from "../../enum/CardType";
+import { Technology } from "../../enum/Technology";
 
 @Entity()
 @Unique({ properties: ["cardType", "displayOrder"] })
 export class Card extends BaseEntity<Card, "_id"> {
-    @PrimaryKey({
-        fieldName: "id",
-    })
+    @PrimaryKey()
     _id!: number;
 
     @Enum(() => CardType)

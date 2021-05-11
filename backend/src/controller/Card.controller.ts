@@ -1,6 +1,6 @@
 import { Controller, Get } from "@nestjs/common";
 import { CardService } from "../service/Card.service";
-import { Card } from "../entity/Card";
+import { Card } from "../entity/Card/Card";
 
 @Controller("/card")
 export class CardController {

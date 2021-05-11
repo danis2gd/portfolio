@@ -1,11 +1,15 @@
 import { Module } from "@nestjs/common";
-import { CardController } from "../controller/Card.controller";
-import { CardModule } from "../module/Card.module";
+import { CardModule } from "./Card.module";
 import { MikroOrmModule } from "@mikro-orm/nestjs";
+import { GraphQLModule } from "@nestjs/graphql";
+import { GqlConfigService } from "../service/GqlConfig.service";
 
 @Module({
     imports: [
         MikroOrmModule.forRoot(),
+        GraphQLModule.forRootAsync({
+            useClass: GqlConfigService,
+        }),
         CardModule,
     ],
 })
