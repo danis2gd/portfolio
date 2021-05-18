@@ -30,6 +30,9 @@ export class Card extends BaseEntity<Card, "_id"> {
     })
     imagePath?: string;
 
+    /**
+     * @TODO: convert Technology to base lookup
+     */
     @Enum({ items: () => Technology, array: true, default: [] })
     technologies: Technology[];
 }

@@ -1,4 +1,4 @@
-export const CardImage = (imagePath) => {
+export const CardImage = ({ imagePath }) => {
     return (
         <div>
             <img src={imagePath} alt={""} />

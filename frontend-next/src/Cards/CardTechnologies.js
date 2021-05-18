@@ -2,7 +2,7 @@ import { CardTechnology } from "./CardTechnology";
 
 export const CardTechnologies = ({ technologies }) => {
     return (
-        <div className="flex justify-center mb-3">
+        <div className={"svg-wrapper"}>
             {technologies.map((technology, key) => {
                 return (
                     <CardTechnology
