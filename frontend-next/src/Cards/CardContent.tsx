@@ -1,6 +1,10 @@
 import { CardDescription } from "./CardDescription";
 
-export const CardContent = ({ description }) => {
+type Props = {
+    description: string;
+};
+
+export const CardContent: React.FC<Props> = ({ description }) => {
     return (
         <div>
             <CardDescription description={description} />

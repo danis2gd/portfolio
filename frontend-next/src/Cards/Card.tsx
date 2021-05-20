@@ -4,7 +4,15 @@ import { CardDescription } from "./CardDescription";
 import { CardImage } from "./CardImage";
 import { isEmpty } from "../util/array";
 
-export const Card = ({ imagePath, title, subTitle, description, technologies }) => {
+type Props = {
+    imagePath: string;
+    title: string;
+    subTitle: string;
+    description: string;
+    technologies: string[];
+};
+
+export const Card: React.FC<Props> = ({ imagePath, title, subTitle, description, technologies }) => {
     return (
         <div className="grid-item">
             <div className="grid-item-wrapper">

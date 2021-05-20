@@ -1,6 +1,6 @@
 import Typed from "react-typed";
 
-export const Splash = () => {
+export const Splash: React.FC = () => {
     return (
         <div className={"bg"}>
             {/*

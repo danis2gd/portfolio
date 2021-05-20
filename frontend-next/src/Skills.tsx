@@ -16,7 +16,7 @@ const skills = gql`
     }
 `;
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
     const { loading, error, data } = useQuery(skills);
 
     if (loading) return "Loading...";

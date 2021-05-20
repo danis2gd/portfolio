@@ -1,7 +1,11 @@
 import { ReactSVG } from "react-svg";
 import ReactTooltip from "react-tooltip";
 
-export const CardTechnology = ({ technology }) => {
+type Props = {
+    technology: string;
+};
+
+export const CardTechnology: React.FC<Props> = ({ technology }) => {
     return (
         <div className={"svg-item"}>
             <ReactSVG

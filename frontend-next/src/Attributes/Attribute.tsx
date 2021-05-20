@@ -1,8 +1,19 @@
-export const Attribute = ({ title, caption, skills, studying }) => {
+import { ReactSVG } from "react-svg";
+
+type Props = {
+    title: string;
+    caption: string;
+    skills: string[];
+    studying: string[];
+};
+
+export const Attribute: React.FC<Props> = ({ title, caption, skills, studying }) => {
     return (
         <div className={"attribute"}>
             <span className="icon">
-                {/*{{ include('svg/design.svg')}}*/}
+                <ReactSVG
+                    src={`img/svg/attribute/${title.toLowerCase()}.svg`}
+                />
             </span>
 
             <h2 className="heading">

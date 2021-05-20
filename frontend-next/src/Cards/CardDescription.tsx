@@ -1,6 +1,10 @@
 import ReactHtmlParser from "react-html-parser";
 
-export const CardDescription = ({ description }) => {
+type Props = {
+    description: string;
+};
+
+export const CardDescription: React.FC<Props> = ({ description }) => {
     return (
         <div>
             {ReactHtmlParser(description)}

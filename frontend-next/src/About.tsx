@@ -1,10 +1,10 @@
 import { Attributes } from "./Attributes/Attributes";
 
-export const About = () => {
+export const About: React.FC = () => {
     return (
         <>
             <div className={"about-container initial-container"}>
-                <div className={"about-content px-16 pb-8 sm:px-12 sm:pb-14"}>
+                <div className={"about-content container px-16 pb-8 sm:px-12 sm:pb-14"}>
                     <h2 className="heading">About Me</h2>
 
                     <p>

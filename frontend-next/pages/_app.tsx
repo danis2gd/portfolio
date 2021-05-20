@@ -1,4 +1,5 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { AppProps } from "next/app";
 import "../styles/base.less";
 
 const client = new ApolloClient({
@@ -6,7 +7,7 @@ const client = new ApolloClient({
     cache: new InMemoryCache(),
 });
 
-const App = ({ Component, pageProps }) => {
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     return (
         <ApolloProvider client={client}>
             <Component {...pageProps} />

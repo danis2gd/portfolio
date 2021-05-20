@@ -1,8 +1,8 @@
 import { Attribute } from "./Attribute";
 
-export const Attributes = () => {
+export const Attributes: React.FC = () => {
     return (
-        <div className={"attributes-container mt-12 mb-10 mx-auto w-9/12"}>
+        <div className={"attributes-container container mt-12 mb-10 mx-auto w-9/12"}>
             <div className={"attributes"}>
                 <Attribute
                     title={"Frontend"}
