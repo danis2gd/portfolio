@@ -25,10 +25,11 @@ export const Skills: React.FC = () => {
     return (
         <div className={"grid-row info-row"}>
             {data.cards.map((skill) => {
-                const { imagePath, title, subTitle, description, technologies } = skill;
+                const { _id, imagePath, title, subTitle, description, technologies } = skill;
 
                 return (
                     <Card
+                        key={_id}
                         imagePath={imagePath}
                         title={title}
                         subTitle={subTitle}

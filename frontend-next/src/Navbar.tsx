@@ -1,6 +1,10 @@
-export const Navbar = () => {
+type Props = {
+    sticky: boolean;
+};
+
+export const Navbar: React.FC<Props> = ({ sticky = false }) => {
     return (
-        <nav className={"navbar w-full bg-gray-dark z-overlay min-h-60"}>
+        <nav className={`navbar w-full bg-gray-dark z-overlay min-h-60 ${sticky ? "sticky" : ""}`}>
             <div className={"container flex items-center justify-between flex-wrap p-6"}>
                 <div className={"w-full sm:w-auto mb-3 sm:mb-0 items-center flex-no-shrink sm:mr-3"}>
                     <a className={"link--primary link--no-hover flex flex-row fill-current justify-center"} href={"#"}>
@@ -22,4 +26,4 @@ export const Navbar = () => {
             </div>
         </nav>
     );
-}
+};

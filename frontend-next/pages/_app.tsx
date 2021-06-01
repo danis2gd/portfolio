@@ -1,3 +1,4 @@
+require('intersection-observer');
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { AppProps } from "next/app";
 import "../styles/base.less";

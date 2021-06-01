@@ -4,6 +4,7 @@ import { Navbar } from "../src/Navbar";
 import { About } from "../src/About";
 import { Skills } from "../src/Skills";
 import { Works } from "../src/Works";
+import { Header } from "../src/Header/Header";
 
 const Index: React.FC = () => {
     return (
@@ -17,9 +18,7 @@ const Index: React.FC = () => {
             </Head>
 
             <main className={"page-content"}>
-                <Splash />
-
-                <Navbar />
+                <Header />
 
                 <About />
 

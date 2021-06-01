@@ -25,10 +25,11 @@ export const Works = () => {
     return (
         <div className={"grid-row info-row"}>
             {data.cards.map((work) => {
-                const { imagePath, title, subTitle, description, technologies } = work;
+                const { _id, imagePath, title, subTitle, description, technologies } = work;
 
                 return (
                     <Card
+                        key={_id}
                         imagePath={imagePath}
                         title={title}
                         subTitle={subTitle}
