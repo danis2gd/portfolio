@@ -46,6 +46,7 @@ module.exports = {
                 "-14r": "-14rem",
                 "-11r": "-11rem",
                 "-17r": "-17rem",
+                "16": "4rem",
                 "18": "4.5rem",
                 "28": "7rem",
                 "60": "60px",
@@ -64,11 +65,13 @@ module.exports = {
             },
             maxWidth: {
                 "4r": "4rem",
+                "1280": "1280px",
             },
             zIndex: {
                 base: 0,
                 content: 5,
-                overlay: 100,
+                overlay: 25,
+                modal: 100,
             }
         },
     },

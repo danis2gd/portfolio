@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 
 export const useElementOnScreen = () => {
-    const containerRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
+    const containerRef = useRef<Element>(null);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
 
     const callbackFunction = (entries) => {
         const [entry] = entries;
