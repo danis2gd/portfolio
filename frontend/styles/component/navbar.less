@@ -8,7 +8,7 @@
 
 .navbar
 {
-@apply z-overlay;
+    @apply z-overlay;
 
     overflow:         hidden;
     background-color: #333333;
@@ -66,12 +66,17 @@
 
 .social-bar
 {
-    @apply flex;
+    @apply flex flex-none items-center;
 }
 
 .social-icon
 {
-    @apply w-8;
+    @apply w-full max-w-30 max-h-30 mr-2 fill-current text-white;
+
+    &:last-child
+    {
+        @apply mr-0;
+    }
 }
 
 @media (max-width: 370px)

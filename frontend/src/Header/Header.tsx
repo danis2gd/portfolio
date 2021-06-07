@@ -5,11 +5,10 @@ import { useElementOnScreen } from "../util/useElementOnScreen";
 
 export const Header: React.FC = () => {
     const [containerRef, isVisible] = useElementOnScreen();
-    const [inView, setInView] = useState<boolean>(false);
 
     return (
         <>
-            <Splash ref={containerRef} inView={isVisible} />
+            <Splash ref={containerRef} />
 
             <Navbar sticky={!isVisible} />
 

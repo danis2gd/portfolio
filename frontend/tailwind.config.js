@@ -1,5 +1,5 @@
 module.exports = {
-    mode: "jit",
+    // mode: "jit",
     darkMode: "class",
     purge: [],
     theme: {
@@ -24,7 +24,7 @@ module.exports = {
                 },
                 theme: {
                     primary: "#FF7D12",
-                    dark: "#b35708",
+                    dark: "#B35708",
                 },
             },
             height: {
@@ -53,17 +53,18 @@ module.exports = {
                 "75": "75px",
             },
             minHeight: {
-                "25": "25px",
                 "60": "60px",
                 "300": "300px",
                 "400": "400px",
             },
             maxHeight: {
+                "30": "30px",
                 "4r": "4rem",
                 "300": "300px",
                 "400": "400px",
             },
             maxWidth: {
+                "30": "35px",
                 "4r": "4rem",
                 "1280": "1280px",
             },

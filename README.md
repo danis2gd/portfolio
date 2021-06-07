@@ -4,7 +4,7 @@ My personal portfolio for danielchadwick.co.uk hosting my: skills, technologies 
 
 ## frontend
 
-NextJS application styled with TailwindCSS 2.0.
+NextJS application styled with TailwindCSS 2.
 
 ## backend
 

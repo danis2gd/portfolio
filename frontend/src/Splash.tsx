@@ -3,25 +3,19 @@ import Typed from "react-typed";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-type Props = {
-    isVisible: boolean;
-};
-
-export const Splash = forwardRef((props: Props, ref: RefObject<Element>) => {
-    const { isVisible } = props;
-
+export const Splash = forwardRef((props, ref: RefObject<Element>) => {
     return (
-        <div className={`bg ${isVisible ? "" : "mb-16"}`} ref={ref}>
-        {/*
-             <!-- splash page
-                 Image belongs to Andi Campbell Jones
-                 desc: Humber Sunset – A scenic view up the Humber estuary and on to the iconic Humber bridge.
-                 Taken from the foreshore I loved the way the light of the sunset was reflecting off the pebbles giving
-                 an extra dynamic to this picture.
-
-                 src: http://andicampbelljones.com/sunsets-sunrises-best-of/
-             -->
-        */}
+        <div className={`bg`} ref={ref}>
+            {/*
+                 <!-- splash page
+                     Image belongs to Andi Campbell Jones
+                     desc: Humber Sunset – A scenic view up the Humber estuary and on to the iconic Humber bridge.
+                     Taken from the foreshore I loved the way the light of the sunset was reflecting off the pebbles giving
+                     an extra dynamic to this picture.
+    
+                     src: http://andicampbelljones.com/sunsets-sunrises-best-of/
+                 -->
+            */}
 
             <div className={"caption"}>
                 <h1 className={"name"}>
@@ -50,7 +44,7 @@ export const Splash = forwardRef((props: Props, ref: RefObject<Element>) => {
                         </a>
 
                         <a className={"fade-link show"} href={"#"}>
-                            <img className={"icon"} src={"img/social_cv.png"} />
+                            <img className={"icon"} src={"img/social_cv.png"}  alt="CV"/>
                         </a>
                     </div>
                 </div>

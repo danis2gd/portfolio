@@ -20,12 +20,14 @@ const Index: React.FC = () => {
 
                 <About />
 
-                <div className={"container mt-8"}>
+                <div className={"container mt-8 mb-4"}>
                     <Skills />
                 </div>
 
                 <div className={"container"}>
-                    <h2>My Work</h2>
+                    <h2 className={"heading"}>
+                        My Work
+                    </h2>
 
                     <Works />
                 </div>
