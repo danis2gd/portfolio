@@ -3,6 +3,7 @@ import { About } from "../src/About";
 import { Skills } from "../src/Skills";
 import { Works } from "../src/Works";
 import { Header } from "../src/Header/Header";
+import { Footer } from "../src/Footer/Footer";
 
 const Index: React.FC = () => {
     return (
@@ -31,6 +32,8 @@ const Index: React.FC = () => {
 
                     <Works />
                 </div>
+
+                <Footer />
             </main>
         </>
     );
