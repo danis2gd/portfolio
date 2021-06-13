@@ -1,0 +1,11 @@
+import { Card } from "./src/entity/Card";
+import { EntityCaseNamingStrategy } from "@mikro-orm/core";
+
+export default {
+    entities: [
+        Card
+    ],
+    dbName: "portfolio",
+    type: "postgresql",
+    namingStrategy: EntityCaseNamingStrategy,
+};
